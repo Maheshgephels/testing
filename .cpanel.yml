@@ -1,10 +1,10 @@
----
 deployment:
   tasks:
-    - export DEPLOY_DIR=/home/allevent/repositories/testing
+    - export DEPLOY_DIR=/home/allevent/public_html/deployed  # Correct path for deployment
     - /bin/bash:
         command: |
           # Step 1: Install Node.js dependencies
+          cd /home/allevent/repositories/testing  # Ensure you're in the correct directory
           npm install --production
           
           # Step 2: Build the React application
